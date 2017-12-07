@@ -1,0 +1,83 @@
+@import "../common.less";
+
+.m-comments-02 {
+    > .com-h {
+        .pl(18);
+        .lh(88);
+        .fs(34);
+        font-weight: 500;
+    }
+
+    > .com-text {
+        border: 2px solid #e6e3e1;
+
+        .mr(24);
+        .ml(24);
+
+        > textarea {
+            vertical-align: middle;
+            outline: none;
+            border: none;
+            width: 100%;
+            resize: none;
+            .h(144);
+        }
+
+        > .bottom {
+            .h(74);
+            border-top: 1px solid #F4F4F4;
+            background-color: #fbfbfb;
+
+            > span {
+                margin-right: -1px;
+                text-align: center;
+                background-color: orange;
+                border: 1px solid orange;
+                .w(200);
+                .h(74);
+                .lh(74);
+
+                .fs(34);
+                color: #fff;
+            }
+        }
+    }
+
+    > .com-list {
+        .pt(34);
+        .pb(86);
+        > ul > li {
+            > .l {
+                .pr(20);
+                .pl(20);
+                > img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
+
+            > .r {
+                //触发bfc
+                overflow: hidden;
+                .info {
+                    .lh(40);
+                    .fs(28);
+                    > .name {
+                        color: #00b3ee;
+                    }
+
+                    > .time {
+                        color: #a3939f;
+                        .mr(20);
+                    }
+                }
+
+                > .words {
+                    .pt(10);
+                    .fs(30);
+                }
+            }
+        }
+    }
+}

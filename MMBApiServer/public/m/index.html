@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script>
+        document.querySelector('html').style.fontSize = window.screen.width / 10 + 'px';
+    </script>
+</head>
+<body>
+<!--通用头部-->
+<div class="common-header clearfix">
+    <a class='fl header-logo' href="#"><img src="./images/header_logo.png" alt=""></a>
+    <a class='fr header-app' href="#"><img src="./images/header_app.png" alt=""></a>
+</div>
+
+<!--搜索框-->
+<div class="m-search-box">
+    <button class="fr">搜索</button>
+    <div class="left">
+        <input type="text" placeholder="请输入你想比价的商品">
+    </div>
+</div>
+
+<!--导航-->
+<div class="m-nav">
+    <!--template id="m-nav-tpl"-->
+
+</div>
+
+<!--超值折扣推荐-->
+<div class="m-discount">
+    <div class="m-title-bar discount-t clearfix">
+        <span>超值折扣推荐</span>
+        <a class="fr" href="#">
+            <span class="fa fa-chevron-right"></span>
+        </a>
+    </div>
+    <div class="discount-b">
+        <!--template id="discount-b-tpl"-->
+
+        <!---->
+        <div class="more">
+            <a class="more" href="#">更多优惠信息&gt;&gt;</a>
+        </div>
+    </div>
+</div>
+
+<!--品牌排行-->
+<div class="m-title-bar clearfix m-rank">
+    <span>超值折扣推荐</span>
+    <a class="fr" href="#">
+        <span class="fa fa-chevron-right"></span>
+    </a>
+</div>
+
+<!--登录 注册 返回顶部-->
+<div class="m-back-top">
+    <ul class="clearfix">
+        <li class="fl"><a href="#">登录</a></li>
+        <li class="fl"><a href="#">注册</a></li>
+        <li class="fl">返回顶部</li>
+    </ul>
+</div>
+
+<!--通用底部栏-->
+<div class="m-foot">
+    <p>
+        <a class="to-app" href="#">手机APP下载</a>
+        <a class="to-h5" href="#">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+    </p>
+    <p>
+        <a href="#">m.manmanbuy.com</a>
+    </p>
+</div>
+
+<!--导航的模板-->
+<script type="text/template" id="m-nav-tpl">
+    <ul class="clearfix">
+        {{each result v i}}
+        <li class="fl">
+            <a href="{{v.titlehref}}">
+                {{@v.img}}
+                <p>{{v.name}}</p>
+            </a>
+        </li>
+        {{/each}}
+
+    </ul>
+</script>
+
+<script type="text/template" id="discount-b-tpl">
+    <ul>
+        {{each result v i}}
+        <li class="clearfix">
+            <a href="{{v.titlehref}}">
+                <div class="left fl">
+                    <img src="images/item01.jpg" alt="">
+                </div>
+                <div class="right">
+                    <p class="desc">{{v.productName}}
+                        <span class="price">{{v.productPinkage}}</span>
+                    </p>
+
+                    <p class="source clearfix">{{v.productFrom}}|{{v.productTime}}
+                        <span class="fr num">{{v.productId}}</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+<script src="./js/common.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <!--<link rel="stylesheet" href="./css/common.css">-->
+    <link rel="stylesheet" href="./css/category.css">
+    <script>
+        document.querySelector('html').style.fontSize = window.screen.width / 10 + 'px';
+    </script>
+</head>
+<body>
+<!--通用头部-->
+<div class="common-header clearfix">
+    <a class='fl header-logo' href="#"><img src="./images/header_logo.png" alt=""></a>
+    <a class='fr header-app' href="#"><img src="./images/header_app.png" alt=""></a>
+</div>
+
+<!--搜索框-->
+<div class="m-search-box">
+    <button class="fr">搜索</button>
+    <div class="left">
+        <input type="text" placeholder="请输入你想比价的商品">
+    </div>
+</div>
+
+<!--比较搜索模块下的列表-->
+<div class="m-category-list">
+    <!--templateid = "categorytitle-tpl"-->
+</div>
+
+
+<!--登录 注册 返回顶部-->
+<div class="m-back-top">
+    <ul class="clearfix">
+        <li class="fl"><a href="#">登录</a></li>
+        <li class="fl"><a href="#">注册</a></li>
+        <li class="fl">返回顶部</li>
+    </ul>
+</div>
+
+<!--通用底部栏-->
+<div class="m-foot">
+    <p>
+        <a class="to-app" href="#">手机APP下载</a>
+        <a class="to-h5" href="#">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+    </p>
+    <p>
+        <a href="#">m.manmanbuy.com</a>
+    </p>
+</div>
+
+<!--分类的模板-->
+<script type="text/template" id="categorytitle-tpl">
+    {{each result v i}}
+    <dl>
+        <dt>{{v.title}} <span data-titleid="{{v.titleId}}" data-toggle-status="0" class="toggle-icon fa fa-chevron-down"></span></dt>
+        <dd class="close">
+            <!--<ul class="clearfix">-->
+                <!--<li class="fl"><a href="#">电视</a></li>-->
+                <!--<li class="fl"><a href="#">空调</a></li>-->
+                <!--<li class="fl"><a href="#">影院</a></li>-->
+                <!--<li class="fl"><a href="#">冰箱</a></li>-->
+                <!--<li class="fl"><a href="#">DVD</a></li>-->
+            <!--</ul>-->
+        </dd>
+    </dl>
+    {{/each}}
+</script>
+<!--大分类下的 小分类列表-->
+<script type="text/template" id="categorylist-tpl">
+    <ul class="clearfix">
+        {{each result v i}}
+        <li class="fl"><a href="./productList.html?categoryId={{v.categoryId}}" data-category-id="{{v.categoryId}}">{{v.category}}</a></li>
+        {{/each}}
+    </ul>
+</script>
+
+
+
+
+
+<script src="./js/common.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./js/category.js"></script>
+</body>
+</html>

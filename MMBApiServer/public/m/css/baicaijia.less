@@ -1,0 +1,158 @@
+@import "common.less";
+
+.common-header {
+    position: relative;
+    padding: 0;
+    background-color: #f4483e;
+
+    h3 {
+        color: #fff;
+        text-align: center;
+        .fs(48);
+        .lh(90);
+    }
+    > a {
+        .center-y();
+        .r(10);
+    }
+}
+
+//分类category tab选项
+.m-tb-category-tab {
+    background-color: #fff;
+    .pb(4);
+    > .search {
+        .w(74);
+        .h(72);
+        border-left: 1px solid @mainBorder;
+    }
+
+    > .tab-box {
+        overflow: hidden;
+
+        > ul {
+            width: 300%;
+            .pl(20);
+        }
+        > ul > li {
+            .lh(72);
+            .fs(26);
+            .mr(46);
+            color: #000;
+            &.active {
+                color: #f4483e;
+                border-bottom: 2px solid #f4483e;
+            }
+        }
+    }
+
+}
+
+.m-tb-category-list {
+    .mt(8);
+    .mb(56);
+    > ul > li {
+        background-color: #fff;
+        overflow: hidden;
+
+        .mb(12);
+        .pt(20);
+        .pr(12);
+        .pb(20);
+        .pl(12);
+
+        .l {
+            > img {
+                .w(260);
+                .h(260);
+            }
+        }
+
+        .r {
+            overflow: hidden;
+            .pl(10);
+
+            > h4 {
+                .fs(30);
+                .h(98);
+                color: #000;
+            }
+
+            > .price {
+                color: #f4483e;
+                .fs(33);
+                > .price-new {
+                    .fs(36);
+                }
+
+                > .price-old {
+                    .fs(22);
+                    color: @mainGray;
+                    text-decoration: line-through;
+                }
+            }
+
+            > .leftcount {
+                .pb(12);
+                .percent {
+                    display: inline-block;
+                    background-color: #ffb7b7;
+                    position: relative;
+                    .mr(20);
+                    .w(164);
+                    .h(27);
+                    .lh(27);
+                    .b-r(13);
+                    border: 1px solid #fc484d;
+                    text-align: center;
+                    color: #fff;
+                    .fs(20);
+                    font-weight: 400;
+
+                    > em {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        .b-r(13);
+                        width: 10%;
+                        border: 1px solid #fc484d;
+                        background-color: #fc484d;
+                    }
+
+                    > i {
+                        position: relative;
+                        z-index: 110;
+                    }
+                }
+
+                .already-take {
+                    color: #fc484d;
+                    .fs(24);
+                }
+            }
+
+            > .get-ticket {
+                .fs(24);
+                > .ticket {
+                    text-align: center;
+                    .w(214);
+                    .h(50);
+                    .lh(50);
+                    border: 1px dotted #fc484d;
+                    color: #fc484d;
+                }
+
+                > .order-link {
+                    text-align: center;
+                    .w(116);
+                    .h(55);
+                    .lh(55);
+                    color: #fff;
+                    background-color: #ff5e5d;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

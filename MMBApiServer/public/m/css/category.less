@@ -1,0 +1,74 @@
+@import 'common.less';
+
+body {
+    background-color: #fff;
+}
+.m-category-list {
+    background-color: #fff;
+    border: 1px solid #cecece;
+    border-radius: 8px;
+    overflow: hidden; /*内部圆角 隐藏的关键设置*/
+    .mb(50);
+    > dl {
+        > dt {
+            position: relative;
+            .h(82);
+            .lh(80);
+
+            border-bottom: 1px solid #cecece;
+            background-color: #ededed;
+            text-align: left;
+            .t-i(30);
+            .fs(36);
+            font-weight: 600;
+
+            > .toggle-icon {
+                .center-y();
+                .r(22);
+                color: #7f7f7f;
+            }
+
+
+        }
+
+        > dd {
+            background-color: #f9f9f9;
+
+            ul > li {
+                width: 33.3333%;
+                .h(78);
+                text-align: center;
+                border-right: 1px solid #d2d2d2;
+                border-bottom: 1px solid #d2d2d2;
+                > a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    color: #000;
+                    .lh(77);
+                    .fs(28);
+                }
+            }
+
+            &.close {
+                display: none;
+            }
+        }
+
+        &:first-child  {
+            //border-radius: 16px 16px 0 0;
+            dt {
+                //border-radius: 16px 16px 0 0;
+
+            }
+        }
+
+        &:last-child {
+            dd {
+                //border-radius: 0 0 16px 16px;
+                ul {
+                }
+            }
+        }
+    }
+}

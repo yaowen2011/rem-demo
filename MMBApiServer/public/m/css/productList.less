@@ -1,0 +1,76 @@
+@import "./common.less";
+
+//商品列表
+.m-product-list {
+    background-color: #fff;
+    > ul > li {
+        .h(238);
+        border-bottom: 1px solid #e9e9e9;
+
+        > .left {
+            .w(240);
+            .pt(50);
+            .pr(20);
+            .pb(50);
+            .pl(20);
+        }
+
+        > .right {
+            overflow: hidden;
+            .pt(20);
+
+            h4 {
+                .fs(30);
+                font-weight: 500;
+                color: #000;
+            }
+
+            > .price {
+                .fs(30);
+                color: #e72d16;
+            }
+
+            > .num {
+                .fs(24);
+            }
+        }
+    }
+}
+
+//底部分页
+.m-paginator {
+    .h(94);
+    .mb(48);
+    >ul > li {
+        width: 33.3333%;
+        height: auto;
+        text-align: center;
+        .pt(20);
+        .fs(30);
+        //.pr(43);
+        //.pl(43);
+
+        button {
+            .fs(30);
+            .w(164);
+            .h(68);
+            border-radius: 6px;
+            border: none;
+            outline: none;
+        }
+
+        select {
+            //设置  padding 让文字居中
+            padding: 0 20%;
+            outline: none;
+            text-align: center;
+            .fs(30);
+            //.w(150);
+            width: auto;
+            .h(68);
+        }
+        option {
+            text-align: center;
+        }
+    }
+}

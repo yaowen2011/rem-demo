@@ -1,0 +1,304 @@
+//定义公共颜色
+@mainColor: #ff841d;
+@borderColor: #e1e1e1;
+@mainGray: rgb(150, 150, 150);
+
+@mainBorder: #e4e4e4;
+
+//设置字体
+.fs(@px) {
+    font-size: unit(@px / 75, rem);
+}
+
+//设置宽度
+.w(@px) {
+    width: unit(@px / 75, rem);
+}
+
+.h(@px) {
+    height: unit(@px / 75, rem);
+}
+
+.lh(@px) {
+    line-height: unit(@px / 75, rem);
+}
+
+//控制外边距距离
+.mt(@px) {
+    margin-top: unit(@px / 75, rem);
+}
+
+.mr(@px) {
+    margin-right: unit(@px / 75, rem);;
+}
+.mb(@px) {
+    margin-bottom: unit(@px / 75, rem);;
+}
+.ml(@px) {
+    margin-left: unit(@px / 75, rem);;
+}
+
+//控制内边距距离
+.padding(@px) {
+    padding: unit(@px / 75, rem);
+}
+
+.pt(@px) {
+    padding-top: unit(@px / 75, rem);
+}
+
+.pr(@px) {
+    padding-right: unit(@px / 75, rem);;
+}
+.pb(@px) {
+    padding-bottom: unit(@px / 75, rem);;
+}
+.pl(@px) {
+    padding-left: unit(@px / 75, rem);;
+}
+
+//控制圆角
+.b-r(@px) {
+    border-radius: unit(@px / 75, rem);
+}
+
+//控制文本缩进
+.t-i(@px) {
+    text-indent: unit(@px / 75, rem);
+}
+
+//定位元素控制边距
+.t(@px) {
+    top: unit(@px / 75, rem);;
+}
+.r(@px) {
+    right: unit(@px / 75, rem);;
+}
+.b(@px) {
+    bottom: unit(@px / 75, rem);;
+}
+.l(@px) {
+    left: unit(@px / 75, rem);;
+}
+
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+//定位居中样式
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+html,body {
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+
+//通用头部
+.common-header {
+    .h(98);
+    .pt(24);
+    .pl(34);
+    .pr(14);
+
+    background-color: @mainColor;
+
+    .header-logo {
+        .w(371);
+        img {
+            width: 100%;
+        }
+    }
+
+    .header-app {
+        .w(68);
+        img {
+            width: 100%;
+        }
+    }
+}
+
+//通用 搜索框
+.m-search-box {
+    .h(102);
+    background-color: #fff;
+    .pt(22);
+    .pl(20);
+    .pr(20);
+    .fs(26);
+    //border-top: 1px solid #e6e6e6;
+    //border-bottom: 1px solid #c9c9c9;
+
+
+    > .left {
+        .mr(160);
+        input {
+            .fs(26);
+            width: 100%;
+            outline: none;
+            .h(60);
+            .b-r(30);
+            background-color: #f1f1f1;
+            .t-i(40);
+        }
+    }
+
+    > button {
+        .fs(26);
+        .w(128);
+        .h(60);
+        .b-r(30);
+        border: none;
+        color: #fff;
+
+        background-color: @mainColor;
+    }
+}
+
+//通用的小标题样式
+.m-title-bar {
+    .pl(10);
+    .pr(10);
+    .h(68);
+    .lh(68);
+    background-image: linear-gradient(to bottom, #ffa834 0%, #ffa024 50%, #ff8900 100%);
+    > span {
+        .fs(34);
+        color: #fff;
+    }
+
+    > a {
+        //.w(50);
+        //.h(50);
+        ////border: 1px solid #fff;
+        .fs(20);
+        border-radius: 50%;
+        color: #fff;
+    }
+}
+
+//通用的返回顶部
+.m-back-top {
+    .h(68);
+    .lh(68);
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    li {
+        //.pl(82);
+        //.pr(82);
+        width: 30%;
+        color: #000;
+        text-align: center;
+        .fs(24);
+        border-right: 1px solid #bbb;
+
+        &:last-child {
+            width: 40%;
+            border-right: none;
+        }
+
+        a {
+            color: #000;
+        }
+    }
+
+}
+
+//通用底部样式
+.m-foot {
+    .pt(36);
+    .pb(30);
+
+    color: #525d68;
+    text-align: center;
+    .fs(28);
+    .to-app {
+
+        color: #fd1715;
+    }
+
+    .to-h5 {
+        color: #000;
+    }
+}
+
+
+//面包屑导航
+.m-break-crum {
+    position: relative;
+    .h(75);
+    .lh(73);
+    .fs(28);
+    .pl(16);
+    .pr(16);
+    font-weight: 500;
+    color: #000;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #cecece;
+    background-image: linear-gradient(to bottom, #fff 0%, #eee 100%);
+
+    a {
+        //.fs(28);
+        color: #000;
+    }
+
+    > button {
+        .fs(28);
+        font-weight: 600;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        .r(16);
+        .w(124);
+        .h(55);
+        .lh(55);
+        text-align: center;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        //box-shadow: 4px 4px 2px #666;
+    }
+}

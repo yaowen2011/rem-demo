@@ -1,0 +1,52 @@
+@import 'components/header02.less';
+
+body {
+    background-color: #fff;
+}
+
+.m-coupon-tips {
+    .lh(70);
+    text-align: center;
+    .fs(24);
+}
+
+.m-couponproduct-list {
+    .pb(50);
+    > ul > li {
+        .pt(20);
+        .pr(36);
+        .pb(32);
+        .pl(20);
+        border-bottom: 1px solid @mainBorder;
+
+        > .l {
+            img {
+                .w(200);
+                .h(160);
+            }
+        }
+
+        > .r {
+            overflow: hidden;
+            .pl(20);
+
+            h4 {
+                color: #000;
+                .lh(44);
+                .fs(24);
+                font-weight: 500;
+            }
+
+            > .price {
+                color: #000;
+                .fs(26);
+                font-weight: 600;
+            }
+
+            > .deadtime {
+                .fs(26);
+                color: orange;
+            }
+        }
+    }
+}

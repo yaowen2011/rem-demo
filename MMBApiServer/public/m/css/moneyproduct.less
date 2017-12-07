@@ -1,0 +1,100 @@
+@import "moneyctrl.less";
+@import "components/comments.less";
+body {
+    background-color: #fff;
+}
+.m-money-product {
+
+    background-color: #fff;
+    .pt(40);
+    .pt(40);
+    .pl(20);
+
+    > .money-product-h {
+        h3 {
+            .fs(40);
+            .h(76);
+            color: #000;
+        }
+        > .from {
+            .fs(25);
+            .h(60);
+            color:#a396aa;
+        }
+    }
+
+    > .money-product-c {
+        > .imgWrap {
+            float: right;
+        }
+        .fs(30);
+    }
+}
+
+//库存状态列表
+.m-stores-list {
+    text-align: center;
+    background-color: #fff;
+    .pt(40);
+    .pb(40);
+    > ul {
+        display: inline-block;
+        .w(274);
+        .pr(20);
+        .pl(20);
+        .pb(10);
+        border-width: 0px 1px 1px 1px;
+        border-style: solid;
+        border-color: #f1f1f1 #f1f1f1 #dbdbdb #f1f1f1;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+
+        > li {
+            text-align: left;
+            border-bottom: 1px dotted #ccc;
+            .lh(40);
+            .fs(24);
+            .pr(20);
+            .pl(20);
+            > .address{
+                color: #000;
+            }
+
+            > .status{
+                color: orange;
+            }
+        }
+    }
+}
+
+//去购买按钮
+.m-gobuy {
+    background-color: #fff;
+    .pr(40);
+    .pl(40);
+
+    > a {
+        display: block;
+        .h(60);
+        .lh(60);
+        background-color: orange;
+        color: #fff;
+        .fs(28);
+        text-align: center;
+        border-radius: 6px;
+    }
+}
+
+//二维码
+.m-qr-code {
+    background-color: #fff;
+    .mt(90);
+    .mb(38);
+    text-align: center;
+
+    > img {
+        display: inline-block;
+        vertical-align: middle;
+        .w(706);
+        .h(274);
+    }
+}

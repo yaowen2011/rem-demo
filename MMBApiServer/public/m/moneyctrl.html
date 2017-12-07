@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <!--<link rel="stylesheet" href="./css/common.css">-->
+    <link rel="stylesheet" href="./css/moneyctrl.css">
+    <script>
+        document.querySelector('html').style.fontSize = window.screen.width / 10 + 'px';
+    </script>
+</head>
+<body>
+<!--通用头部-->
+<div class="common-header clearfix">
+    <h3>省钱控-最新优惠</h3>
+    <a class='fr header-app' href="#"><img src="./images/header_app.png" alt=""></a>
+</div>
+
+<!--和首页底部样式一致-->
+<div class="m-discount">
+<!--template id="m-discount-tpl"-->
+</div>
+
+
+
+
+<!--登录 注册 返回顶部-->
+<div class="m-back-top">
+    <ul class="clearfix">
+        <li class="fl"><a href="#">登录</a></li>
+        <li class="fl"><a href="#">注册</a></li>
+        <li class="fl">返回顶部</li>
+    </ul>
+</div>
+
+<!--通用底部栏-->
+<div class="m-foot">
+    <p>
+        <a class="to-app" href="#">手机APP下载</a>
+        <a class="to-h5" href="#">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+    </p>
+    <p>
+        <a href="#">m.manmanbuy.com</a>
+    </p>
+</div>
+
+<!--导航的模板-->
+<script type="text/template" id="m-discount-tpl">
+    <div class="discount-b">
+        <ul>
+            {{each result v i}}
+            <li class="clearfix">
+                <a href="./moneyproduct.html?">
+                    <div class="left fl">
+                        <img src="images/item01.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <p class="desc">{{v.productName}}
+                            <span class="price">{{v.productPinkage}}</span>
+                        </p>
+
+                        <p class="source clearfix">{{v.productFrom}}|{{v.productTime}}
+                            <span class="fr num">{{v.productComCount}}</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+
+
+        </ul>
+        <!--分页-->
+        <div class="m-paginator">
+            <ul class="clearfix">
+                <li class="fl"><button class="btn-prev">上一页</button></li>
+                <li class="fl">
+                    <select name="page" id="paginator">
+                        <%
+                        var option = '';
+                        var selected = '';
+                        for (var i=1; i<=pageCount; ++i) {
+                            selected = '';
+                            if (i == pageid) {
+                                selected = 'selected';
+                            }
+                            option += `<option value="${i}" ${selected}>${i}/${pageCount}</option>`;
+                        }
+                        %>
+                        <%-option%>
+
+                    </select>
+                </li>
+                <li class="fl"><button data-pagecount="{{pageCount}}" class="btn-next">下一页</button></li>
+            </ul>
+        </div>
+    </div>
+
+</script>
+
+<script src="./js/common.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./js/moneyctrl.js"></script>
+</body>
+</html>

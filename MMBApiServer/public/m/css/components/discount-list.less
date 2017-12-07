@@ -1,0 +1,44 @@
+@import "../common.less";
+
+//一行两列式布局
+.m-discount-list {
+    background-color: #fff;
+    .pb(70);
+    > ul > li {
+        border-bottom: 1px solid @mainBorder;
+        border-right: 1px solid @mainBorder;
+        .h(530);
+        width: 50%;
+        .pt(42);
+        .pr(36);
+        .pb(28);
+        .pl(36);
+
+        > .imgWrapper {
+            text-align: center;
+            > a > img {
+                vertical-align: middle;
+                display: inline-block;
+                .h(278);
+            }
+        }
+
+        > a > h4 {
+            .fs(28);
+            font-weight: 500;
+            color: #000;
+        }
+
+        > .price {
+            .fs(28);
+            color: orange;
+            .pt(12);
+            .pb(20);
+        }
+
+        > .from {
+            .fs(24);
+            color: @mainGray;
+        }
+    }
+}
