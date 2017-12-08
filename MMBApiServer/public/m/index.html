@@ -16,7 +16,7 @@
 <body>
 <!--通用头部-->
 <div class="common-header clearfix">
-    <a class='fl header-logo' href="#"><img src="./images/header_logo.png" alt=""></a>
+    <a class='fl header-logo' href="index.html"><img src="./images/header_logo.png" alt=""></a>
     <a class='fr header-app' href="#"><img src="./images/header_app.png" alt=""></a>
 </div>
 
@@ -85,7 +85,7 @@
 <script type="text/template" id="m-nav-tpl">
     <ul class="clearfix">
         {{each result v i}}
-        <li class="fl">
+        <li class="fl {{i>=8 ? 'off' : 'on'}}" data-index="{{i}}" data-toggle="false">
             <a href="{{v.titlehref}}">
                 {{@v.img}}
                 <p>{{v.name}}</p>
@@ -100,7 +100,7 @@
     <ul>
         {{each result v i}}
         <li class="clearfix">
-            <a href="{{v.titlehref}}">
+            <a href="./discount.html?productid={{v.productId}}">
                 <div class="left fl">
                     <img src="images/item01.jpg" alt="">
                 </div>
@@ -119,9 +119,10 @@
     </ul>
 </script>
 
-<script src="./js/common.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/jquery.easing.1.3.js"></script>
+<script src="./js/common.js"></script>
 <script src="./js/index.js"></script>
 </body>
 </html>

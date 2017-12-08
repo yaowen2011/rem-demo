@@ -46,14 +46,17 @@
     </p>
 </div>
 
-<!--导航的模板-->
+<!--导航的模板
+    {{@v.productImg}}
+-->
 <script type="text/template" id="m-discount-list-tpl">
     <ul class="clearfix">
         {{each result v i}}
-        <li class="fl">
+        <li class="fl" data-load="false">
             <div class="imgWrapper">
                 <a href="./discount.html?productid={{v.productId}}">
-                    {{@v.productImg}}
+                    <img src="" alt="" data-src='{{v.productImg.match(/src=\"(.+?)\"/i)[1]}}'>
+
                 </a>
             </div>
             <a href="./discount.html?productid={{v.productId}}">
@@ -67,9 +70,10 @@
 
 </script>
 
-<script src="./js/common.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/jquery.easing.1.3.js"></script>
+<script src="./js/common.js"></script>
 <script src="./js/inlanddiscount.js"></script>
 </body>
 </html>

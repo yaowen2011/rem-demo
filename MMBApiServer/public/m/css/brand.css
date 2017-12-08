@@ -1,4 +1,12 @@
 @charset "UTF-8";
+.on {
+  display: block;
+  opacity: 1;
+}
+.off {
+  display: none;
+  opacity: 0;
+}
 .fl {
   float: left;
 }
@@ -126,6 +134,10 @@ body {
 .m-back-top li a {
   color: #000;
 }
+.m-back-top li:last-child {
+  background: url(../images/top.jpg) 25% center no-repeat;
+  background-size: 0.4rem;
+}
 .m-foot {
   padding-top: 0.48rem;
   padding-bottom: 0.4rem;
@@ -176,6 +188,7 @@ body {
   padding-bottom: 0.13333333rem;
 }
 .m-nav li {
+  transition: all 1s;
   width: 25%;
   text-align: center;
   padding: 0.53333333rem;

@@ -7,6 +7,23 @@ $(function () {
         success: function(data) {
             //console.log(data);
             $('.m-tb-category-tab').html(template("m-tb-category-tab-tpl", data));
+
+            //头部滑动
+            //js获取ul的宽度
+            //宽度不能这样给  因为 宽度 有宽 有窄
+            //$(".tab-box ul").width($(".tab-box li").outerWidth(true) * $(".tab-box li").length);
+            
+            var width = 0;
+            $(".tab-box ul li").each(function () {
+                $this = $(this);
+                width += $this.outerWidth(true);
+            });
+
+            //加上 ul 的左右padding
+            //默认是带单位的
+            width += parseInt($(".tab-box ul").css("paddingLeft")) * 2;
+            //console.log(width);
+            $(".tab-box ul").width(width);
         }
     });
 
@@ -38,4 +55,6 @@ $(function () {
 
         });
     }
+
+
 });

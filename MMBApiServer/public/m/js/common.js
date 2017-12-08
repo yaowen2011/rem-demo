@@ -22,3 +22,13 @@ var Tools = {
         return obj[key];
     }
 }
+
+//返回顶部功能
+$(function () {
+    $('.m-back-top li:eq(2)').on("click", function () {
+        //alert("heheh");
+        //$(window).scrollTop(0);
+        //$(window)  和 $('html, body')区别
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInQuad');
+    });
+});
