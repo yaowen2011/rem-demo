@@ -1,0 +1,159 @@
+@import "index.less";
+@import "productList.less";
+
+
+.m-brand-top {
+    background-color: #f3f3f3;
+    //.pt(18);
+    //.pb(18);
+    > p {
+        //.mt(18);
+        //.mb(18);
+        //width: 96%;
+        .t-i(20);
+        color: #893509;
+        margin: 0 auto;
+        .lh(78);
+        //.h(78);
+        .fs(28);
+        border: 1px solid @mainBorder;
+    }
+}
+
+.m-brand-list {
+    > ul {
+        background-color: #fff;
+        > li {
+            position: relative;
+            .h(130);
+            .pt(20);
+            .pl(20);
+            border-bottom: 1px solid #e6e6e6;
+            > a {
+                display: block;
+
+                > .l {
+                    > span {
+                        display: block;
+                        .w(40);
+                        .h(40);
+                        .lh(40);
+                        text-align: center;
+                        color: #fff;
+                        .fs(22);
+                        background-color: red;
+                    }
+                }
+
+                > .r {
+                    overflow: hidden;
+                    .pl(20);
+
+                    > h4 {
+                        .fs(33);
+                        .lh(46);
+                        color: #000;
+                    }
+
+                    > .sell-count {
+                        .pt(8);
+                        .fs(24);
+                    }
+                }
+            }
+
+            .btn-right {
+                .center-y();
+                .r(10);
+                .fs(75);
+                color: @mainGray;
+            }
+        }
+    }
+}
+
+//评论列表
+.m-brand-comments {
+    background-color: #fff;
+    .pb(50);
+    > ul {
+        > li {
+            position: relative;
+            .pb(20);
+            border-top: 1px solid @mainGray;
+            > .comment-t {
+                .h(240);
+                .pl(25);
+                > .l {
+                    .pt(50);
+
+                    img {
+                        .w(184);
+                        .h(124);
+                    }
+                }
+
+                > .r {
+                    overflow: hidden;
+                    .pl(42);
+                    .pt(20);
+                    > h4 {
+                        .fs(30);
+                        .lh(50);
+                        color: @mainGray;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            > .comment-b {
+                position: relative;
+                width: 96%;
+                margin: 0 auto;
+                background-color: #f8f8f8;
+                border: 1px solid @mainGray;
+
+                .padding(20);
+
+                > .t {
+                    .fs(22);
+                    .lh(50);
+
+                }
+
+                > .words {
+                    color: #000;
+                    .fs(32);
+                    .lh(55);
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 0px;
+                    border-left: 14px solid transparent;
+                    border-right: 14px solid transparent;
+                    border-bottom: 14px solid @mainGray;
+                    .l(60);
+                    top: -14px;
+
+                }
+
+                //小三角形 因为有边框 和 填充色 所以使用两套伪元素 层叠达到效果
+                //很巧妙
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0px;
+                    border-left: 13px solid transparent;
+                    border-right: 13px solid transparent;
+                    border-bottom: 14px solid #f8f8f8;
+                    .l(61);
+                    top: -13px;
+                }
+            }
+
+
+        }
+    }
+}

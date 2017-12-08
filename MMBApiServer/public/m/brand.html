@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/brand.css">
+    <script>
+        document.querySelector('html').style.fontSize = window.screen.width / 10 + 'px';
+    </script>
+</head>
+<body>
+<!--通用头部-->
+<div class="common-header clearfix">
+    <a class='fl header-logo' href="#"><img src="./images/header_logo.png" alt=""></a>
+    <a class='fr header-app' href="#"><img src="./images/header_app.png" alt=""></a>
+</div>
+
+<!--搜索框-->
+<div class="m-search-box">
+    <button class="fr">搜索</button>
+    <div class="left">
+        <input type="text" placeholder="请输入你想比价的商品">
+    </div>
+</div>
+
+<!--面包屑-->
+<div class="m-break-crum">
+    <ul class="clearfix">
+        <li class="fl"><a href="#">首页</a>&gt;</li>
+        <li class="fl"><a href="#">电视</a>&gt;</li>
+        <li class="fl"><a href="#">乐视TV(Letv)S50</a>&gt;</li>
+    </ul>
+    <button>筛选</button>
+</div>
+
+<!--热门品牌排行-->
+<div class="m-brand-top">
+    <p>平板电视哪个牌子好</p>
+</div>
+
+<div class="m-brand-list">
+    <!-- 销量排行列表 template id="m-brand-list-tpl" -->
+
+</div>
+
+<div class="m-brand-top">
+    <p>平板电视产品销量排行</p>
+</div>
+<!--电视列表-->
+<div class="m-product-list">
+    <!--template id="m-product-list-tpl"-->
+
+
+</div>
+
+
+<div class="m-brand-top">
+    <p>平板电视最新评论</p>
+</div>
+
+<!--热门电视评论列表-->
+<div class="m-brand-comments">
+    <!--template id="m-brand-comments-tpl"-->
+
+</div>
+
+<!--登录 注册 返回顶部-->
+<div class="m-back-top">
+    <ul class="clearfix">
+        <li class="fl"><a href="#">登录</a></li>
+        <li class="fl"><a href="#">注册</a></li>
+        <li class="fl">返回顶部</li>
+    </ul>
+</div>
+
+<!--通用底部栏-->
+<div class="m-foot">
+    <p>
+        <a class="to-app" href="#">手机APP下载</a>
+        <a class="to-h5" href="#">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+    </p>
+    <p>
+        <a href="#">m.manmanbuy.com</a>
+    </p>
+</div>
+
+<!--导航的模板-->
+<script type="text/template" id="m-brand-list-tpl">
+    <ul>
+        {{each result v i}}
+        <li>
+            <a href="./productList.html?categoryId={{v.categoryId}}" class="clearfix">
+                <div class="l fl">
+                    <span >{{v.brandId}}</span>
+                </div>
+                <div class="r">
+                    <h4>{{v.brandName}}</h4>
+                    <p class="sell-count">{{v.brandInfo}}</p>
+                </div>
+            </a>
+            <span class="btn-right fa fa-angle-right"></span>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+<!--电视列表-->
+<script type="text/template" id="m-product-list-tpl">
+    <ul>
+    {{each result v i}}
+    <li class="clearfix" data-productid="{{v.productId}}">
+            <div class="left fl">
+            <a href="./bijia.html?productid={{v.productId}}&brandName={{v.brandName}}">
+            {{@v.productImg}}
+            </a>
+            </div>
+            <div class="right">
+            <a href="./bijia.html?productid={{v.productId}}&brandName={{v.brandName}}">
+            <h4>{{v.productName}}</h4>
+    </a>
+    <p class="price">￥1999.00</p>
+    <p class="num">
+            <a>{{v.productQuote}}</a>
+            <a>{{v.productCom}}</a>
+            </p>
+            </div>
+            </li>
+            {{/each}}
+    </ul>
+</script>
+
+<!--评论列表-->
+<script type="text/template" id="m-brand-comments-tpl">
+    <ul>
+        {{each result v i}}
+        <li>
+            <div class="comment-t clearfix">
+                <div class="l fl">
+                    <img src="images/product-tv-01.png" alt="">
+                </div>
+                <div class="r">
+                    <h4>乐视TV 55英寸智能LED液晶 超级电视 4k超清电视</h4>
+                </div>
+            </div>
+            <div class="comment-b">
+                <div class="t clearfix">
+                    <div class="username fl">{{v.comName}}:</div>
+                    <div class="time fr">{{v.comTime}}</div>
+                </div>
+                <div class="words">
+                    {{v.comContent}}
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+
+<script src="./js/common.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./js/brand.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/gsproduct.css">
+    <script>
+        document.querySelector('html').style.fontSize = window.screen.width / 10 + 'px';
+    </script>
+</head>
+<body>
+<!--通用头部-->
+<div class="common-header clearfix">
+    <h3>凑单品</h3>
+    <a class='fr header-app' href="#"><img src="./images/header_app.png" alt=""></a>
+</div>
+
+<!--头部tab列表-->
+<div class="m-gs-tab">
+    <div class="search fr">
+
+    </div>
+    <ul class="clearfix">
+        <li class="fl">京东</li>
+        <li class="fl">华北</li>
+        <li class="fl">全部价格</li>
+    </ul>
+</div>
+
+<!--分类列表-->
+<div class="m-gs-list">
+    <!--template id="m-gs-list-tpl" -->
+    <ul class="clearfix">
+        <li class="fl">
+            <a href="#">
+                <img src="images/product-tv-01.png" alt="">
+                <h4 class="one-txt-cut">【京东超市】一楠 咖啡 白咖啡</h4>
+                <div class="btn-box clearfix">
+                    <div class="price fl">&yen;0.50</div>
+                    <div class="btn-gs fr">去凑单</div>
+                </div>
+            </a>
+        </li>
+        <li class="fl">
+            <a href="#">
+                <img src="images/product-tv-01.png" alt="">
+                <h4 class="one-txt-cut">【京东超市】一楠 咖啡 白咖啡</h4>
+                <div class="btn-box clearfix">
+                    <div class="price fl">&yen;0.50</div>
+                    <div class="btn-gs fr">去凑单</div>
+                </div>
+            </a>
+        </li>
+
+        <li class="fl">
+            <a href="#">
+                <img src="images/product-tv-01.png" alt="">
+                <h4 class="one-txt-cut">【京东超市】一楠 咖啡 白咖啡</h4>
+                <div class="btn-box clearfix">
+                    <div class="price fl">&yen;0.50</div>
+                    <div class="btn-gs fr">去凑单</div>
+                </div>
+            </a>
+        </li>
+
+        <li class="fl">
+            <a href="#">
+                <img src="images/product-tv-01.png" alt="">
+                <h4 class="one-txt-cut">【京东超市】一楠 咖啡 白咖啡</h4>
+                <div class="btn-box clearfix">
+                    <div class="price fl">&yen;0.50</div>
+                    <div class="btn-gs fr">去凑单</div>
+                </div>
+            </a>
+        </li>
+
+        <li class="fl">
+            <a href="#">
+                <img src="images/product-tv-01.png" alt="">
+                <h4 class="one-txt-cut">【京东超市】一楠 咖啡 白咖啡</h4>
+                <div class="btn-box clearfix">
+                    <div class="price fl">&yen;0.50</div>
+                    <div class="btn-gs fr">去凑单</div>
+                </div>
+            </a>
+        </li>
+
+        <li class="fl">
+            <a href="#">
+                <img src="images/product-tv-01.png" alt="">
+                <h4 class="one-txt-cut">【京东超市】一楠 咖啡 白咖啡</h4>
+                <div class="btn-box clearfix">
+                    <div class="price fl">&yen;0.50</div>
+                    <div class="btn-gs fr">去凑单</div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<!--登录 注册 返回顶部-->
+<div class="m-back-top">
+    <ul class="clearfix">
+        <li class="fl"><a href="#">登录</a></li>
+        <li class="fl"><a href="#">注册</a></li>
+        <li class="fl">返回顶部</li>
+    </ul>
+</div>
+
+<!--通用底部栏-->
+<div class="m-foot">
+    <p>
+        <a class="to-app" href="#">手机APP下载</a>
+        <a class="to-h5" href="#">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+    </p>
+    <p>
+        <a href="#">m.manmanbuy.com</a>
+    </p>
+</div>
+
+<!--导航的模板-->
+<script type="text/template" id="m-coupon-list-tpl">
+    <ul class="clearfix">
+        {{each result v i}}
+        <li class="fl">
+            <a href="./couponproduct.html?couponid={{v.couponId}}">
+                <img src="{{v.couponImg}}" alt="">
+                <p class="brand">{{v.couponTitle}}</p>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+
+</script>
+
+
+<script src="./js/common.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./js/gsproduct.js"></script>
+</body>
+</html>

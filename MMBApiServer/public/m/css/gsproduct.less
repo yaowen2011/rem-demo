@@ -1,0 +1,79 @@
+@import "components/header01.less";
+
+.m-gs-tab {
+    background-color: #fff;
+    > .search {
+        .w(90);
+        .h(76);
+
+        border-left: 1px solid @mainBorder;
+    }
+
+    > ul {
+        overflow: hidden;
+        > li {
+            .h(76);
+            .lh(76);
+            .fs(34);
+            color: #000;
+            width: 33.3333%;
+            text-align: center;
+        }
+    }
+}
+
+.m-gs-list {
+    > ul  {
+        //这里很巧妙 首先ul 的width:98% 然后居中
+        //然后li 50%
+        //然后 a margin: 4px;
+        //之前的 地址列表也是
+        width: 98%;
+        margin: 0 auto;
+        .pt(20);
+        .pb(56);
+        > li {
+            width: 50%;
+            .mb(2);
+            //.pr(8);
+            //.pl(16);
+
+            > a {
+                background-color: #fff;
+                display: block;
+                .mt(6);
+                .mr(6);
+                .mb(6);
+                .ml(6);
+
+                .pr(12);
+                .pl(12);
+                .pb(12);
+
+                > h4 {
+                    color: #000;
+                    .lh(46);
+                    .fs(24);
+                }
+
+                > .btn-box {
+                    .lh(56);
+                    > .price {
+                        .fs(27);
+                        color: #f73301;
+                    }
+                    > .btn-gs {
+                        .fs(27);
+                        .w(124);
+                        text-align: center;
+                        color: #fff;
+                        background-color: #ff9501;
+                        border-radius: 6px;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
