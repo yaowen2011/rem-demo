@@ -200,6 +200,7 @@ body {
 }
 .m-gs-tab {
   background-color: #fff;
+  position: relative;
 }
 .m-gs-tab > .search {
   width: 1.2rem;
@@ -216,6 +217,37 @@ body {
   color: #000;
   width: 33.3333%;
   text-align: center;
+  overflow: hidden;
+}
+.m-gs-tab > ul > li > .fa {
+  margin-left: 0.13333333rem;
+}
+.m-gs-tab > ul > li > .second {
+  background-color: #fff;
+  position: absolute;
+  z-index: 333;
+  top: 1.01333333rem;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  text-indent: 0.18666667rem;
+  box-shadow: 0px 3px 6px #ddd;
+}
+.m-gs-tab > ul > li > .second > li {
+  position: relative;
+  border-top: 1px solid #969696;
+}
+.m-gs-tab > ul > li > .second > li > .icon-check {
+  display: none;
+}
+.m-gs-tab > ul > li > .second > li.check > .icon-check {
+  font-weight: 300;
+  display: block;
+  color: red;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.21333333rem;
 }
 .m-gs-list > ul {
   position: relative;
@@ -262,3 +294,5 @@ body {
 .m-gs-list > ul > li > .second {
   position: absolute;
 }
+
+/*# sourceMappingURL=maps/gsproduct.css.map */

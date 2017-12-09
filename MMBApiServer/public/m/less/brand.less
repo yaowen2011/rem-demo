@@ -1,6 +1,22 @@
 @import "index.less";
 @import "productList.less";
 
+//通用背景色类
+.bg-red {
+    background-color: #f10e0e;
+}
+
+.bg-orange {
+    background-color: #ff9135;
+}
+
+.bg-green {
+    background-color: #8adf5b;
+}
+
+.bg-gray {
+    background-color: #c9c9c9;
+}
 
 .m-brand-top {
     background-color: #f3f3f3;
@@ -154,6 +170,30 @@
             }
 
 
+        }
+    }
+}
+
+
+//修复电视列表样式
+.m-product-list {
+    li {
+        height: auto !important;
+    }
+    .left {
+        padding: 0 !important;
+        .pl(50);
+        .pr(50);
+        text-align: center;
+        .pt(50);
+        a {
+            display: block;
+        }
+        img {
+            .w(192);
+            .h(140);
+            vertical-align: middle;
+            display: inline-block;
         }
     }
 }

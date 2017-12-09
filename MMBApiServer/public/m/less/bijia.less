@@ -181,65 +181,141 @@ body {
   border: none;
   outline: none;
 }
-.m-product-list {
+.common-header {
+  position: relative;
+  padding: 0;
+  background-color: #f4483e;
+}
+.common-header h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 0.64rem;
+  line-height: 1.2rem;
+}
+.common-header > a {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.13333333rem;
+}
+.m-tb-category-tab {
   background-color: #fff;
+  padding-bottom: 0.05333333rem;
 }
-.m-product-list > ul > li {
-  height: 3.17333333rem;
-  border-bottom: 1px solid #e9e9e9;
+.m-tb-category-tab > .search {
+  width: 0.98666667rem;
+  height: 0.96rem;
+  border-left: 1px solid #e4e4e4;
 }
-.m-product-list > ul > li > .left {
-  width: 3.2rem;
-  padding-top: 0.66666667rem;
-  padding-right: 0.26666667rem;
-  padding-bottom: 0.66666667rem;
+.m-tb-category-tab > .tab-box {
+  overflow: auto;
+}
+.m-tb-category-tab > .tab-box > ul {
+  width: 300%;
   padding-left: 0.26666667rem;
 }
-.m-product-list > ul > li > .right {
-  overflow: hidden;
-  padding-top: 0.26666667rem;
-}
-.m-product-list > ul > li > .right h4 {
-  font-size: 0.4rem;
-  font-weight: 500;
+.m-tb-category-tab > .tab-box > ul > li {
+  line-height: 0.96rem;
+  font-size: 0.34666667rem;
+  margin-right: 0.61333333rem;
   color: #000;
 }
-.m-product-list > ul > li > .right > .price {
-  font-size: 0.4rem;
-  color: #e72d16;
+.m-tb-category-tab > .tab-box > ul > li.active {
+  color: #f4483e;
+  border-bottom: 2px solid #f4483e;
 }
-.m-product-list > ul > li > .right > .num {
+.m-tb-category-list {
+  margin-top: 0.10666667rem;
+  margin-bottom: 0.74666667rem;
+}
+.m-tb-category-list > ul > li {
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 0.16rem;
+  padding-top: 0.26666667rem;
+  padding-right: 0.16rem;
+  padding-bottom: 0.26666667rem;
+  padding-left: 0.16rem;
+}
+.m-tb-category-list > ul > li .l > img {
+  width: 3.46666667rem;
+  height: 3.46666667rem;
+}
+.m-tb-category-list > ul > li .r {
+  overflow: hidden;
+  padding-left: 0.13333333rem;
+}
+.m-tb-category-list > ul > li .r > h4 {
+  font-size: 0.4rem;
+  height: 1.30666667rem;
+  color: #000;
+}
+.m-tb-category-list > ul > li .r > .price {
+  color: #f4483e;
+  font-size: 0.44rem;
+}
+.m-tb-category-list > ul > li .r > .price > .price-new {
+  font-size: 0.48rem;
+}
+.m-tb-category-list > ul > li .r > .price > .price-old {
+  font-size: 0.29333333rem;
+  color: #969696;
+  text-decoration: line-through;
+}
+.m-tb-category-list > ul > li .r > .leftcount {
+  padding-bottom: 0.16rem;
+}
+.m-tb-category-list > ul > li .r > .leftcount .percent {
+  display: inline-block;
+  background-color: #ffb7b7;
+  position: relative;
+  margin-right: 0.26666667rem;
+  width: 2.18666667rem;
+  height: 0.36rem;
+  line-height: 0.36rem;
+  border-radius: 0.17333333rem;
+  border: 1px solid #fc484d;
+  text-align: center;
+  color: #fff;
+  font-size: 0.26666667rem;
+  font-weight: 400;
+}
+.m-tb-category-list > ul > li .r > .leftcount .percent > em {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 0.17333333rem;
+  width: 10%;
+  border: 1px solid #fc484d;
+  background-color: #fc484d;
+}
+.m-tb-category-list > ul > li .r > .leftcount .percent > i {
+  position: relative;
+  z-index: 110;
+}
+.m-tb-category-list > ul > li .r > .leftcount .already-take {
+  color: #fc484d;
   font-size: 0.32rem;
 }
-.m-paginator {
-  height: 1.25333333rem;
-  margin-bottom: 0.64rem;
+.m-tb-category-list > ul > li .r > .get-ticket {
+  font-size: 0.32rem;
 }
-.m-paginator > ul > li {
-  width: 33.3333%;
-  height: auto;
+.m-tb-category-list > ul > li .r > .get-ticket > .ticket {
   text-align: center;
-  padding-top: 0.26666667rem;
-  font-size: 0.4rem;
+  width: 2.85333333rem;
+  height: 0.66666667rem;
+  line-height: 0.66666667rem;
+  border: 1px dotted #fc484d;
+  color: #fc484d;
 }
-.m-paginator > ul > li button {
-  font-size: 0.4rem;
-  width: 2.18666667rem;
-  height: 0.90666667rem;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-}
-.m-paginator > ul > li select {
-  padding: 0 20%;
-  outline: none;
+.m-tb-category-list > ul > li .r > .get-ticket > .order-link {
   text-align: center;
-  font-size: 0.4rem;
-  width: auto;
-  height: 0.90666667rem;
+  width: 1.54666667rem;
+  height: 0.73333333rem;
+  line-height: 0.73333333rem;
+  color: #fff;
+  background-color: #ff5e5d;
+  border-radius: 5px;
 }
-.m-paginator > ul > li option {
-  text-align: center;
-}
-
-/*# sourceMappingURL=maps/productList.css.map */
+/*# sourceMappingURL=bijia.less.map */

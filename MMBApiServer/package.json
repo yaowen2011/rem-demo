@@ -15,12 +15,14 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-clean-css": "^2.0.12",
+    "gulp-copy": "0.0.2",
     "gulp-htmlmin": "^2.0.0",
     "gulp-imagemin": "^3.0.2",
+    "gulp-less": "^3.3.2",
     "gulp-rev": "^7.1.0",
-    "gulp-uglify": "^1.5.4",
-    "gulp-copy": "0.0.2",
-    "gulp-rev-collector": "^1.0.5"
+    "gulp-rev-collector": "^1.0.5",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^1.5.4"
   },
   "dependencies": {
     "captchapng": "0.0.1",

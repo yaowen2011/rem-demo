@@ -29,6 +29,7 @@ $(function () {
         //alert("heheh");
         //$(window).scrollTop(0);
         //$(window)  和 $('html, body')区别
+
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInQuad');
     });
 });

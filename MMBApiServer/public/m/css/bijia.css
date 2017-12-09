@@ -181,150 +181,143 @@ body {
   border: none;
   outline: none;
 }
-/*商品图片显示区*/
-.m-product-show {
+.common-header {
   position: relative;
-  text-align: center;
-  height: 6.72rem;
-  background-color: #fff;
-  padding: 0.48rem;
+  padding: 0;
+  background-color: #f4483e;
 }
-.m-product-show > h4 {
-  height: 1.92rem;
-  font-size: 0.49333333rem;
-}
-.m-product-show > .banner img {
-  display: inline-block;
-  vertical-align: middle;
-  width: 4.66666667rem;
-  height: 2.93333333rem;
-}
-.m-product-show > .collect {
-  position: absolute;
-  width: 1.06666667rem;
-  height: 1.06666667rem;
-  line-height: 1.06666667rem;
-  bottom: 0.56rem;
-  right: 0.64rem;
-  background-color: #96d900;
-  border-radius: 50%;
+.common-header h3 {
   color: #fff;
-  font-size: 0.37333333rem;
   text-align: center;
-}
-/*商品描述tab切换*/
-.m-desc-tab {
-  height: 0.90666667rem;
-  line-height: 0.85333333rem;
-  text-align: center;
-  color: #fff;
-  border-top: 2px solid #bf5736;
-  border-bottom: 2px solid #bf5736;
-  font-size: 0.37333333rem;
-}
-.m-desc-tab li {
-  width: 33.3333%;
-  background-color: #ffca38;
-  border-right: 2px solid #bf5736;
-}
-.m-desc-tab li.active {
-  background-color: #ffa127;
-}
-.m-desc-tab li:last-child {
-  border-right: none;
-}
-.m-product-buy {
-  background-color: #fff;
-}
-.m-product-buy > .buy {
-  background-color: #fff;
-  position: relative;
-  height: 1.2rem;
+  font-size: 0.64rem;
   line-height: 1.2rem;
-  font-size: 0.45333333rem;
-  padding-left: 0.18666667rem;
 }
-.m-product-buy > .buy .from {
-  width: 6.13333333rem;
-  font-size: 0.45333333rem;
-  color: #000;
-  font-weight: 500;
-}
-.m-product-buy > .buy .price {
-  width: 2.21333333rem;
-  color: #c80807;
-}
-.m-product-buy > .buy .btn-buy {
-  color: #fff;
-  text-align: center;
+.common-header > a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 1.49333333rem;
-  height: 0.64rem;
-  line-height: 0.64rem;
-  right: 0.10666667rem;
-  background-color: #ff5300;
-  border-radius: 8px;
+  right: 0.13333333rem;
 }
-.m-product-buy > .tips {
-  border-top: 1px solid #b2b2b2;
-  border-bottom: 8px solid #747474;
-  font-size: 0.32rem;
+.m-tb-category-tab {
+  background-color: #fff;
+  padding-bottom: 0.05333333rem;
+}
+.m-tb-category-tab > .search {
+  width: 0.98666667rem;
+  height: 0.96rem;
+  border-left: 1px solid #e4e4e4;
+}
+.m-tb-category-tab > .tab-box {
+  overflow: auto;
+}
+.m-tb-category-tab > .tab-box > ul {
+  width: 300%;
+  padding-left: 0.26666667rem;
+}
+.m-tb-category-tab > .tab-box > ul > li {
+  line-height: 0.96rem;
+  font-size: 0.34666667rem;
+  margin-right: 0.61333333rem;
+  color: #000;
+}
+.m-tb-category-tab > .tab-box > ul > li.active {
+  color: #f4483e;
+  border-bottom: 2px solid #f4483e;
+}
+.m-tb-category-list {
+  margin-top: 0.10666667rem;
+  margin-bottom: 0.74666667rem;
+}
+.m-tb-category-list > ul > li {
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 0.16rem;
   padding-top: 0.26666667rem;
-  padding-right: 0.48rem;
-  padding-bottom: 0.37333333rem;
-  padding-left: 0.24rem;
+  padding-right: 0.16rem;
+  padding-bottom: 0.26666667rem;
+  padding-left: 0.16rem;
 }
-.m-comments {
-  margin-top: 2px;
+.m-tb-category-list > ul > li .l > img {
+  width: 3.46666667rem;
+  height: 3.46666667rem;
 }
-.m-comments .comments-t {
-  height: 0.86666667rem;
-  line-height: 0.86666667rem;
+.m-tb-category-list > ul > li .r {
+  overflow: hidden;
+  padding-left: 0.13333333rem;
+}
+.m-tb-category-list > ul > li .r > h4 {
   font-size: 0.4rem;
-  font-weight: 600;
+  height: 1.30666667rem;
+  color: #000;
+}
+.m-tb-category-list > ul > li .r > .price {
+  color: #f4483e;
+  font-size: 0.44rem;
+}
+.m-tb-category-list > ul > li .r > .price > .price-new {
+  font-size: 0.48rem;
+}
+.m-tb-category-list > ul > li .r > .price > .price-old {
+  font-size: 0.29333333rem;
+  color: #969696;
+  text-decoration: line-through;
+}
+.m-tb-category-list > ul > li .r > .leftcount {
+  padding-bottom: 0.16rem;
+}
+.m-tb-category-list > ul > li .r > .leftcount .percent {
+  display: inline-block;
+  background-color: #ffb7b7;
+  position: relative;
+  margin-right: 0.26666667rem;
+  width: 2.18666667rem;
+  height: 0.36rem;
+  line-height: 0.36rem;
+  border-radius: 0.17333333rem;
+  border: 1px solid #fc484d;
   text-align: center;
-  background-color: #dbdbdb;
-}
-.m-comments > .comments-b {
-  background-color: #fff;
-}
-.m-comments > .comments-b li {
-  padding-left: 0.26666667rem;
-  padding-right: 0.26666667rem;
-  padding-bottom: 0.13333333rem;
-  border-bottom: 2px solid #c5c5c5;
-}
-.m-comments > .comments-b li > .user {
+  color: #fff;
   font-size: 0.26666667rem;
-  padding-top: 0.32rem;
-  height: 1.46666667rem;
+  font-weight: 400;
 }
-.m-comments > .comments-b li > .user .right {
-  text-align: right;
+.m-tb-category-list > ul > li .r > .leftcount .percent > em {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 0.17333333rem;
+  width: 10%;
+  border: 1px solid #fc484d;
+  background-color: #fc484d;
 }
-.m-comments > .comments-b li > .words {
-  font-size: 0.33333333rem;
-  font-weight: 500;
+.m-tb-category-list > ul > li .r > .leftcount .percent > i {
+  position: relative;
+  z-index: 110;
 }
-.m-comments > .more {
-  background-color: #fff;
-  padding-top: 0.4rem;
-  padding-right: 0.26666667rem;
-  padding-bottom: 0.66666667rem;
-  padding-left: 0.26666667rem;
+.m-tb-category-list > ul > li .r > .leftcount .already-take {
+  color: #fc484d;
+  font-size: 0.32rem;
 }
-.m-comments > .more > button {
-  display: block;
-  width: 100%;
-  outline: none;
-  border: none;
-  border-radius: 6px;
-  height: 0.82666667rem;
-  line-height: 0.82666667rem;
-  background-image: linear-gradient(to bottom, #f0f0f0 0%, #d6d6d6 100%);
+.m-tb-category-list > ul > li .r > .get-ticket {
+  font-size: 0.32rem;
+}
+.m-tb-category-list > ul > li .r > .get-ticket > .ticket {
   text-align: center;
-  font-size: 0.4rem;
-  font-weight: 600;
+  width: 2.85333333rem;
+  height: 0.66666667rem;
+  line-height: 0.66666667rem;
+  border: 1px dotted #fc484d;
+  color: #fc484d;
 }
+.m-tb-category-list > ul > li .r > .get-ticket > .order-link {
+  text-align: center;
+  width: 1.54666667rem;
+  height: 0.73333333rem;
+  line-height: 0.73333333rem;
+  color: #fff;
+  background-color: #ff5e5d;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=bijia.less.map */
+
+/*# sourceMappingURL=maps/bijia.css.map */
